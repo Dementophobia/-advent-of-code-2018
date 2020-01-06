@@ -7,8 +7,12 @@ def get_ints(string):
 def read_file(name, strip = True):
     with open(f"files/input{name}") as f:
         content = f.readlines()
+    
     if strip:
-        return [x.strip() for x in content]
+        content = [x.strip() for x in content]
+    
+    if len(content) == 1:
+        return content[0]
     return content
 
 def timer(func):
