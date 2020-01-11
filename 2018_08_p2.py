@@ -25,7 +25,7 @@ def solve():
     return get_value(root)
 
 index = -1
-input = [int(x) for x in read_file("08").split()]
+input = get_ints(read_file("08"))
 
 result = solve() 
 print(f"Solution: {result}")
